@@ -2,7 +2,7 @@ import { useNavigate, useLocation } from 'react-router-dom'
 import { useAuth } from '../hooks/useAuth'
 
 const NAV = [
-  { key: 'customers', label: 'Customers', path: '/', active: true },
+  { key: 'clients', label: 'Clients', path: '/', active: true },
   { key: 'tickets', label: 'Tickets', path: null },
   { key: 'pipeline', label: 'Pipeline', path: null },
   { key: 'payments', label: 'Payments', path: null },
@@ -31,7 +31,7 @@ export default function Layout({ children }) {
 
         <nav className="flex flex-col gap-0.5" style={{ padding: '0 10px' }}>
           {NAV.map(item => {
-            const isActive = item.active && (location.pathname === '/' || location.pathname.startsWith('/customer'))
+            const isActive = item.active && (location.pathname === '/' || location.pathname.startsWith('/client'))
             return (
               <div
                 key={item.key}

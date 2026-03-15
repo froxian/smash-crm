@@ -2,8 +2,8 @@ import { Routes, Route, Navigate } from 'react-router-dom'
 import { AuthProvider, useAuth } from './hooks/useAuth'
 import Layout from './components/Layout'
 import Login from './pages/Login'
-import Customers from './pages/Customers'
-import CustomerDetail from './pages/CustomerDetail'
+import Clients from './pages/Clients'
+import ClientDetail from './pages/ClientDetail'
 
 function Guard({ children }) {
   const { user, loading } = useAuth()
@@ -19,8 +19,8 @@ function AppRoutes() {
   return (
     <Routes>
       <Route path="/login" element={user ? <Navigate to="/" /> : <Login />} />
-      <Route path="/" element={<Guard><Layout><Customers /></Layout></Guard>} />
-      <Route path="/customer/:id" element={<Guard><Layout><CustomerDetail /></Layout></Guard>} />
+      <Route path="/" element={<Guard><Layout><Clients /></Layout></Guard>} />
+      <Route path="/client/:id" element={<Guard><Layout><ClientDetail /></Layout></Guard>} />
       <Route path="*" element={<Navigate to="/" />} />
     </Routes>
   )
