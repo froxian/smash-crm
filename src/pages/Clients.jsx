@@ -4,7 +4,7 @@ import { supabase } from '../lib/supabase'
 
 const ST = {
   lead: { label: 'Lead', color: 'var(--purple)' },
-  conversation: { label: 'Conversation', color: 'var(--yellow)' },
+  convo: { label: 'Convo', color: 'var(--yellow)' },
   objections: { label: 'Objections', color: '#e67700' },
   active: { label: 'Active', color: 'var(--green)' },
   declined: { label: 'Declined', color: 'var(--red)' },
