@@ -4,10 +4,11 @@ import { supabase } from '../lib/supabase'
 import { useAuth } from '../hooks/useAuth'
 
 const ST = {
-  active: { label: 'Active', color: 'var(--green)' },
-  paused: { label: 'Paused', color: 'var(--yellow)' },
-  churned: { label: 'Churned', color: 'var(--red)' },
   lead: { label: 'Lead', color: 'var(--purple)' },
+  conversation: { label: 'Conversation', color: 'var(--yellow)' },
+  objections: { label: 'Objections', color: '#e67700' },
+  active: { label: 'Active', color: 'var(--green)' },
+  declined: { label: 'Declined', color: 'var(--red)' },
 }
 
 export default function ClientDetail() {
